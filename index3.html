@@ -1,43 +1,60 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+
 
   <title>팬데믹</title>
   <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
 </head>
 <body>
 
-  <img src="팬데믹.jpg" width="100%">
-  <script type='text/javascript'>
-	//<![CDATA[
-	// // 사용할 앱의 JavaScript 키를 설정해 주세요.
-	Kakao.init('e3030525d3504ab09e67d47b2e64df26');
-	// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-		Kakao.Link.createDefaultButton({
-		container: '#kakao-link-btn',
-		objectType: 'feed',
-		content: {
-			title: '이스라엘의 역사 #3',
-			description: '',
-			imageUrl: 'http://common.jbch.org/upload/mdata/2019/1000_2019110115454706924_kye9411.jpg',
-			link: {
-				mobileWebUrl: 'http://mcard.jbch.org/?id=123&seid=',
-				webUrl: 'http://mcard.jbch.org/?id=123&seid='
-			}
-		},
-		buttons: [
-			{
-				title: '글보기',
-				link: {
-					mobileWebUrl: 'http://mcard.jbch.org/?id=123&seid=',
-					webUrl: 'http://mcard.jbch.org/?id=123&seid='
-				}
-			}
-		]
-	});
+  <a id="kakao-link-btn" href="javascript:;">
 
-		//]]>
-</script>
+  <img src="팬데믹.jpg" width="100%">
+
+  <script type='text/javascript'>
+    //<![CDATA[
+      // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+      Kakao.init('YOUR APP KEY');
+      // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+      Kakao.Link.createDefaultButton({
+        container: '#kakao-link-btn',
+        objectType: 'feed',
+        content: {
+          title: '딸기 치즈 케익',
+          description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+          imageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com'
+          }
+        },
+        social: {
+          likeCount: 286,
+          commentCount: 45,
+          sharedCount: 845
+        },
+        buttons: [
+          {
+            title: '웹으로 보기',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com'
+            }
+          },
+          {
+            title: '앱으로 보기',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com'
+            }
+          }
+        ]
+      });
+    //]]>
+  </script>
+
 </body>
 </html>
